@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/tailwind-53b10a916610d749.css" integrity="sha384&#x2D;Fcr5rB6LhTrdzqSDwZE8BekNIb4ZfH4suk3SfdT0dQJUdKb8FtOzT3Qx&#x2F;fJHtjWz"/>
+
+<link rel="modulepreload" href="/zipson-playground-384aaa2a1ee77d10.js" crossorigin=anonymous integrity="sha384-VDlpq7zjcNhIHqYhileFL6sjsaZtLzsAlxtRmhfYiSFFDcRux+gK4R+XhQH71XI5">
+<link rel="preload" href="/zipson-playground-384aaa2a1ee77d10_bg.wasm" crossorigin=anonymous integrity="sha384-LdKJxUvn2L1Tn7yq9xBnuxqkQxMjpvUqJsVSBuKUcgVf+ftXswKOLV15Fw7vsMVO" as="fetch" type="application/wasm"></head>
+<body>
+<script type="module" nonce="cWIaz72TCAyVDO83p9gwAg==">
+import init, * as bindings from '/zipson-playground-384aaa2a1ee77d10.js';
+const wasm = await init('/zipson-playground-384aaa2a1ee77d10_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
