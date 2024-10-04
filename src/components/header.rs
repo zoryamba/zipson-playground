@@ -6,8 +6,8 @@ pub fn Header() -> impl IntoView {
         <header class="flex flex-col justify-center bg-blue-300 w-full h-auto pt-8 pb-8 mb-10 font-mono">
             <div class="flex title justify-center text-5xl pb-4 text-white">"Zipson"</div>
             <div class="flex description justify-center text-xl pb-4 text-white">
-                "JSON parse and stringify with compression
-"            </div>
+                "JSON parse and stringify with compression"
+            </div>
             <div class="flex justify-center">
                 <a
                     type="button"
