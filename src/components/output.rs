@@ -8,7 +8,7 @@ pub fn Output(output: impl Fn() -> String + 'static, error: ReadSignal<Option<St
                 <textarea
                     disabled
                     rows="4"
-                    class="bg-slate-200 h-80 outline-none w-full px-0 text-sm text-gray-900 resize-none border-0  focus:ring-0 dark:text-dark dark:placeholder-gray-400"
+                    class="bg-slate-200 h-full outline-none w-full px-0 text-sm text-gray-900 resize-none border-0  focus:ring-0 dark:text-dark dark:placeholder-gray-400"
                     placeholder="Write a comment..."
                     required
                     prop:value=output
