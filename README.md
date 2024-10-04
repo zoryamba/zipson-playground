@@ -6,6 +6,8 @@ This is my Capstone Project for [2024 Summer RustCamp](https://www.linkedin.com/
 
 This simple web-playground allows to convert JSON data to zipson and vice versa in realtime. It is built on top of [Leptos](https://leptos.dev/) ([WASM](https://developer.mozilla.org/en-US/docs/WebAssembly)-based reactive front-end framework) and [Tailwind](https://tailwindcss.com/) (utility-first CSS framework)
 
+This playground is available on [Github Pages](https://zoryamba.github.io/zipson-playground/)
+
 ### Prerequisites
 
 1. Install [Rust](https://www.rust-lang.org/tools/install)
@@ -36,3 +38,4 @@ trunk serve --port <port> [--open]
 ### Further improvements
 
  - try to attach some JS code editor with syntax highlighting (e.g. [Ace Editor](https://ace.c9.io/)) to JSON input using [wasm-bindgen](https://book.leptos.dev/web_sys.html#using-js-libraries-with-wasm-bindgen)
+ - set up [GitHub Actions](https://medium.com/@mpaternostro/how-to-deploy-pages-on-github-using-actions-a9281d03b345) to deploy to pages
