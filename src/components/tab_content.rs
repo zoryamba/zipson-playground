@@ -33,19 +33,23 @@ pub fn TabContent(initial_text: String, convert: fn(String) -> anyhow::Result<Co
 
         <div class="flex justify-between">
             <div>
-                <p class="ms-auto text-lg text-gray-500 dark:text-gray-400">Input your own JSON and try it out!</p>
+                <p class="ms-auto text-lg text-gray-500 dark:text-gray-400">
+                    "Input your own JSON and try it out!"
+                </p>
             </div>
             <div class="flex">
                 <Metric
                     name="Size reduced by"
                     units="%"
                     tooltip_text="The amount the output size was reduced by zipson compared to minified JSON of the same data. If the original data was of length 500, and the zipson output was of length 100, there was a size reduction of 80%."
-                    value=move || output.get().size_reduced_by />
+                    value=move || output.get().size_reduced_by
+                />
                 <Metric
                     name="Compression time"
                     units="ms"
                     tooltip_text="The time it took to stringify and compress the data with zipson. Note that this is for a single iteration and is not an accurate benchmark of performance as there can be occasional spikes unrelated to actual zipson performance."
-                    value=move || output.get().conversion_time />
+                    value=move || output.get().conversion_time
+                />
             </div>
         </div>
     }
