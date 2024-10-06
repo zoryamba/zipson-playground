@@ -1,9 +1,10 @@
+use std::time::Duration;
 use web_time::Instant;
 
 #[derive(Clone, Debug, Default, PartialEq)]
 pub struct ConversionResult {
     pub value: String,
-    pub conversion_time: f32,
+    pub conversion_time: Duration,
     pub size_reduced_by: f32,
 }
 
@@ -11,7 +12,7 @@ pub fn decode(zipson: String) -> anyhow::Result<ConversionResult> {
     let start = Instant::now();
     let zipson_value = serde_zipson::de::from_str::<serde_zipson::value::Value>(&zipson)?;
     // counting only zipson parsing
-    let conversion_time = start.elapsed().as_micros() as f32 / 1000.;
+    let conversion_time = start.elapsed();
 
     let json = serde_json::to_value(zipson_value)?.to_string();
 
@@ -34,7 +35,7 @@ pub fn encode(json: String) -> anyhow::Result<ConversionResult> {
     let start = Instant::now();
     let zipson = serde_zipson::ser::to_string(&zipson_value, true, true)?;
     // counting only zipson stringify
-    let conversion_time = start.elapsed().as_micros() as f32 / 1000.;
+    let conversion_time = start.elapsed();
 
     let size_reduced_by = (1. - zipson.chars().count() as f32 / json_len as f32) * 100.;
     Ok(ConversionResult {
