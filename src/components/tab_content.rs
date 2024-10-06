@@ -48,7 +48,7 @@ pub fn TabContent(initial_text: String, convert: fn(String) -> anyhow::Result<Co
                     name="Compression time"
                     units="ms"
                     tooltip_text="The time it took to stringify and compress the data with zipson. Note that this is for a single iteration and is not an accurate benchmark of performance as there can be occasional spikes unrelated to actual zipson performance."
-                    value=move || output.get().conversion_time
+                    value=move || output.get().conversion_time.as_micros() as f32 / 1000.
                 />
             </div>
         </div>
