@@ -21,7 +21,7 @@ This playground is available on [Github Pages](https://zoryamba.github.io/zipson
 
 ### Build project
 ```
-trunk build
+trunk build [--dist <path>]
 ```
 
 ### Or run dev server
