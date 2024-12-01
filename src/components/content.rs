@@ -60,15 +60,6 @@ pub fn Content() -> impl IntoView {
                     </li>
                     <li>
                         <code>"serde_zipson"</code>
-                        " repeat feature not working yet, so "
-                        <code>"[1,1,1,1,1,1,1,1,1]"</code>
-                        " ends up in "
-                        <code>"|ÊÊÊÊÊÊÊÊÊ÷"</code>
-                        " instead of "
-                        <code>"|Êþþþ^5÷"</code>
-                    </li>
-                    <li>
-                        <code>"serde_zipson"</code>
                         " object template feature not working yet, so "
                         <code>"[{\"key\":\"value1\"},{\"key\":\"value2\"}]"</code>
                         " ends up in "
