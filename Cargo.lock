@@ -111,9 +111,9 @@ checksum = "8b96ec4966b5813e2c0507c1f86115c8c5abaadc3980879c3424042a02fd1ad3"
 
 [[package]]
 name = "cc"
-version = "1.1.24"
+version = "1.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "812acba72f0a070b003d3697490d2b55b837230ae7c6c6497f05cc2ddbb8d938"
+checksum = "f34d93e62b03caf570cccc334cbc6c2fceca82f39211051345108adcba3eebdc"
 dependencies = [
  "shlex",
 ]
@@ -1183,7 +1183,7 @@ dependencies = [
 [[package]]
 name = "serde_zipson"
 version = "0.1.0"
-source = "git+https://github.com/zoryamba/serde_zipson.git#b4add7254b25ae66ea109a656c2423743e41bdbc"
+source = "git+https://github.com/zoryamba/serde_zipson.git#07cc7d5323a12c6858aebab64b468c7015e0de9c"
 dependencies = [
  "chrono",
  "indexmap",
