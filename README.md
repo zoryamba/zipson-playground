@@ -31,10 +31,14 @@ trunk serve --port <port> [--open]
 
 ### Known issues
 
- - initial conversion for some reason takes 40+ ms while consequent conversions take up to 1 ms 
- - `serde_zipson` panics on integer overflow
- - `serde_zipson` repeat feature not working yet, so `[1,1,1,1,1,1,1,1,1]` ends up in `|ÊÊÊÊÊÊÊÊÊ÷` instead of `|Êþþþ^5÷`
- - `serde_zipson` object template feature not working yet, so `[{"key":"value1"},{"key":"value2"}]` ends up in `|{¨key¨¨value1¨}{ß0¨value2¨}÷` instead of `|¦¨key¨‡¨value1¨¨value2¨—÷`
+ - initial conversion for some reason takes 40+ ms while consequent conversions take up to 1 ms
+
+### `serde_zipson` known issues
+
+ - `serialize_struct`/`deserialize_struct` are not implemented yet, so serde `derive` doesn't work for structs
+ - `serialize_enum`/`deserialize_enum` are not implemented yet, so serde `derive` doesn't work for enums
+ - panics on integer overflow
+ - object template feature not working yet, so `[{"key":"value1"},{"key":"value2"}]` ends up in `|{¨key¨¨value1¨}{ß0¨value2¨}÷` instead of `|¦¨key¨‡¨value1¨¨value2¨—÷`
 
 ### Further improvements
 

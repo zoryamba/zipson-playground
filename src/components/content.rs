@@ -54,13 +54,31 @@ pub fn Content() -> impl IntoView {
                     <li>
                         "initial conversion for some reason takes 40+ ms while consequent conversions take up to 1 ms"
                     </li>
+                </ul>
+            </section>
+            <section class="pt-10 pb-4">
+                <h3 class="pb-2 text-xl">
+                    <code>"serde_zipson"</code>
+                    " known issues"
+                </h3>
+                <ul class="list-disc pl-4">
                     <li>
-                        <code>"serde_zipson"</code>
-                        " panics on integer overflow"
+                        <code>"serialize_struct"</code>" / "<code>"deserialize_struct"</code>
+                        " are not implemented yet, so serde "
+                        <code>"derive"</code>
+                        " doesn't work for structs"
                     </li>
                     <li>
-                        <code>"serde_zipson"</code>
-                        " object template feature not working yet, so "
+                        <code>"serialize_enum"</code>" / "<code>"deserialize_enum"</code>
+                        " are not implemented yet, so serde "
+                        <code>"derive"</code>
+                        " doesn't work for enums"
+                    </li>
+                    <li>
+                        "panics on integer overflow"
+                    </li>
+                    <li>
+                        "object template feature not working yet, so "
                         <code>"[{\"key\":\"value1\"},{\"key\":\"value2\"}]"</code>
                         " ends up in "
                         <code>"|{¨key¨¨value1¨}{ß0¨value2¨}÷"</code>
